@@ -1,8 +1,229 @@
-@use 'variables';
+@use 'variables' as *;
 @use 'reset';
 
-body {
-    *{
+
+.content{
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site-header {
+  background-color: $color-bg;
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: $font-main;
+
+  .nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .logo {
         
     }
+
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li a {
+        text-decoration: none;
+        color: $color-primary;
+        font-weight: 400;
+        font-size: 1.15rem;
+      }
+
+      .dropdown {
+        display: flex;
+        gap: 1rem;
+      }
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+        
+      li{
+        list-style: none;
+      }
+
+      .nav-actions-icons{
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-actions-buttons{
+        display: flex;
+        gap: 2rem;
+      }
+
+      .signin {
+        color: $color-primary;
+        font-weight: 500;
+        text-decoration: underline;
+      }
+
+      .signup {
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1rem 2rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+.hero {
+  background-color: $color-bg;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: $section-padding;
+
+  .hero-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $color-primary;
+      margin-bottom: 1rem;
+    }
+
+    .subtext {
+      font-size: 1rem;
+      color: $color-text;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+
+        &.primary {
+          background-color: $color-primary;
+          color: $color-white;
+        }
+
+        &.video {
+          background: none;
+          border: none;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          color: $color-primary;
+
+          .play-icon {
+            background: $color-white;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 2rem;
+
+      .stat {
+        text-align: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 0.5rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          color: $color-primary;
+          margin: 0;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: $color-muted;
+          margin: 0.25rem 0 0;
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 45%;
+    position: relative;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .testimonial-card {
+      position: absolute;
+      background-color: #e7f6f2;
+      padding: 1rem;
+      border-radius: 1rem;
+      max-width: 250px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      font-size: 0.9rem;
+      color: $color-text;
+
+      blockquote {
+        margin: 0 0 0.5rem 0;
+        font-style: italic;
+        quotes: "“" "”";
+        &::before {
+          content: open-quote;
+          font-size: 1.5rem;
+          line-height: 1;
+          color: $color-primary;
+        }
+      }
+
+      footer {
+        font-weight: 600;
+        color: $color-primary;
+      }
+
+      &.top {
+        top: 2rem;
+        right: 1rem;
+      }
+
+      &.bottom {
+        bottom: 2rem;
+        left: 0;
+      }
+    }
+  }
 }
