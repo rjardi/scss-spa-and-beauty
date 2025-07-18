@@ -1,6 +1,17 @@
 @use 'variables' as *;
 @use 'reset';
 
+html{
+  background-color: $color-bg;
+}
+
+body{
+  background-image: url("src/img/lotus-background.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top right;
+}
+
 
 .content{
     max-width: 1600px;
@@ -9,30 +20,25 @@
 }
 
 .site-header {
-  background-color: $color-bg;
+  // background-color: $color-bg;
   padding: 2rem 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-family: $font-main;
 
   .nav {
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 1600px;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    .logo {
-        
-    }
 
     .nav-links {
       display: flex;
       gap: 3rem;
       list-style: none;
       padding: 0;
-      margin: 0;
-
+      margin-left: 8rem;                          
       li a {
         text-decoration: none;
         color: $color-primary;
@@ -50,7 +56,10 @@
       display: flex;
       align-items: center;
       gap: 4rem;
-        
+      justify-self: right;
+      text-align: end;
+      margin-left: auto;
+      
       li{
         list-style: none;
       }
@@ -86,29 +95,54 @@
 
 
 .hero {
-  background-color: $color-bg;
+  // background-color: $color-bg;
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: $section-padding;
+  font-family: $font-main;
+  gap: 5px;
 
   .hero-content {
     flex: 1 1 50%;
-    max-width: 600px;
+    // max-width: 600px;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 4rem;
       font-weight: 700;
       color: $color-primary;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+      /* Bring back the beauty and glow of your skin */
+      /* Heading 1 */
+      font-style: normal;
+      font-weight: 700;
+      // font-size: 64px;
+      line-height: 80px;
+      /* or 125% */
+
+      /* Dark Blue */
+      color: #264065;
+
+
     }
 
     .subtext {
       font-size: 1rem;
-      color: $color-text;
+      color: $color-muted;
       line-height: 1.6;
       margin-bottom: 2rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      /* or 167% */
+
+      /* Gray 2 */
+      // color: #909090;
+
+
     }
 
     .hero-cta {
@@ -122,10 +156,16 @@
         font-weight: 600;
         cursor: pointer;
         text-decoration: none;
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 18px;
+
 
         &.primary {
           background-color: $color-primary;
           color: $color-white;
+          align-self: center;
+          padding: 1rem 2.5rem;
         }
 
         &.video {
@@ -133,18 +173,19 @@
           border: none;
           display: flex;
           align-items: center;
-          gap: 0.5rem;
+          gap: 1rem;
           color: $color-primary;
-
+          
           .play-icon {
             background: $color-white;
             border-radius: 50%;
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            
           }
         }
       }
@@ -152,25 +193,30 @@
 
     .stats {
       display: flex;
-      gap: 2rem;
+      gap: 72px;
+      padding: 32px;
+      max-width: 643px;
+      background-color: $color-white;
+      border-radius: 16px;;
 
       .stat {
         text-align: center;
 
         img {
-          width: 40px;
-          height: 40px;
+          width: 4.5rem;
+          height: 4.5rem;
           margin-bottom: 0.5rem;
         }
 
         h3 {
-          font-size: 1.5rem;
+          font-size: 36px;
           color: $color-primary;
           margin: 0;
+          font-weight: 500;
         }
 
         p {
-          font-size: 0.875rem;
+          font-size: 18px;
           color: $color-muted;
           margin: 0.25rem 0 0;
         }
@@ -183,7 +229,8 @@
     position: relative;
 
     img {
-      max-width: 100%;
+      margin-left: -12rem;
+      max-width: 105%;
       height: auto;
       display: block;
     }
@@ -193,22 +240,27 @@
       background-color: #e7f6f2;
       padding: 1rem;
       border-radius: 1rem;
-      max-width: 250px;
+      max-width: 405px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      font-size: 0.9rem;
-      color: $color-text;
+      font-size: 18px;
+      color: black;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
 
-      blockquote {
-        margin: 0 0 0.5rem 0;
-        font-style: italic;
-        quotes: "“" "”";
+
+      p{
+        padding-top: 2.5rem;
+        position: relative;
         &::before {
-          content: open-quote;
-          font-size: 1.5rem;
+          top: 0;
+          position: absolute;
+          content: "“";
+          font-size: 5rem;
           line-height: 1;
           color: $color-primary;
         }
       }
+
 
       footer {
         font-weight: 600;
@@ -216,13 +268,13 @@
       }
 
       &.top {
-        top: 2rem;
-        right: 1rem;
+        top: 18rem;
+        right: -6rem;
       }
 
       &.bottom {
-        bottom: 2rem;
-        left: 0;
+        top: 38rem;
+        right: 0;
       }
     }
   }
