@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'reset';
+@use 'sass:color';
 
 html{
   background-color: $color-bg;
@@ -44,12 +45,18 @@ body{
         color: $color-primary;
         font-weight: 400;
         font-size: 1.15rem;
+        &:hover {
+          text-decoration: underline;
+        }
+
       }
 
       .dropdown {
         display: flex;
         gap: 1rem;
       }
+
+
     }
 
     .nav-actions {
@@ -68,6 +75,9 @@ body{
         display: flex;
         gap: 2rem;
         align-items: center;
+        li a :hover {
+          transform: scale(1.25)
+        }
       }
 
       .nav-actions-buttons{
@@ -79,6 +89,9 @@ body{
         color: $color-primary;
         font-weight: 500;
         text-decoration: underline;
+        &:hover {
+          color: color.scale($color-primary, $lightness: 30%);
+        }
       }
 
       .signup {
@@ -88,6 +101,9 @@ body{
         border-radius: 999px;
         text-decoration: none;
         font-weight: 500;
+        &:hover {
+          background-color: color.scale($color-primary, $lightness: 15%);
+        }
       }
     }
   }
@@ -166,6 +182,9 @@ body{
           color: $color-white;
           align-self: center;
           padding: 1rem 2.5rem;
+          &:hover {
+            background-color: color.scale($color-primary, $lightness: 15%);;
+          }
         }
 
         &.video {
@@ -175,6 +194,10 @@ body{
           align-items: center;
           gap: 1rem;
           color: $color-primary;
+
+          &:hover {
+            text-decoration: underline;
+          }
           
           .play-icon {
             background: $color-white;
@@ -185,9 +208,14 @@ body{
             align-items: center;
             justify-content: center;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            &:hover {
+              transform: scale(1.25)
+            }
             
           }
         }
+
+
       }
     }
 
