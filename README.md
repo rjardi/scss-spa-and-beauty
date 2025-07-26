@@ -1,5 +1,7 @@
 # Spa & Beauty Landing Page
 
+https://rjardi.github.io/scss-spa-and-beauty/
+
 A modern, responsive landing page for a spa and beauty business. Built with semantic HTML and modular SASS for a Fullstack Development Master course.
 
 <img src="src/img/snapshot.png">
