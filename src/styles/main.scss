@@ -3,14 +3,15 @@
 @use 'sass:color';
 
 html{
-  background-color: $color-bg;
+  background: linear-gradient($color-bg 0 820px, $color-white 820px 100%) ;
 }
 
 body{
-  background-image: url("src/img/lotus-background.png");
+  background-image: url("../img/lotus-background.png");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: top right;
+  min-height: 100vh;
 }
 
 
@@ -18,12 +19,11 @@ body{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    min-height: 100vh;
 }
 
 .site-header {
-  // background-color: $color-bg;
   padding: 2rem 2rem;
-  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   font-family: $font-main;
 
   .nav {
@@ -111,7 +111,6 @@ body{
 
 
 .hero {
-  // background-color: $color-bg;
   display: flex;
   flex: 1;
   flex-wrap: wrap;
@@ -123,24 +122,16 @@ body{
 
   .hero-content {
     flex: 1 1 50%;
-    // max-width: 600px;
 
     h1 {
       font-size: 4rem;
       font-weight: 700;
       color: $color-primary;
       margin-bottom: 2rem;
-      /* Bring back the beauty and glow of your skin */
-      /* Heading 1 */
       font-style: normal;
       font-weight: 700;
-      // font-size: 64px;
       line-height: 80px;
-      /* or 125% */
-
-      /* Dark Blue */
       color: #264065;
-
 
     }
 
@@ -153,11 +144,6 @@ body{
       font-weight: 400;
       font-size: 1.5rem;
       line-height: 2.5rem;
-      /* or 167% */
-
-      /* Gray 2 */
-      // color: #909090;
-
 
     }
 
